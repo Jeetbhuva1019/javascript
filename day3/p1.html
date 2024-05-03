@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+
+        <h1>-------------Student percentage-------------</h1>
+
+        <h1>Enter first subject marks</h1>
+        <input type="text" id="s1">
+
+        <h1>Enter second subject marks</h1>
+        <input type="text" id="s2">
+
+        <h1>Enter thurd subject marks</h1>
+        <input type="text" id="s3">
+
+        <h1>Enter fourth subject marks</h1>
+        <input type="text" id="s4">
+
+        <h1>Enter fifth subject marks</h1>
+        <input type="text" id="s5">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+<script>
+
+    let a = document.getElementById("s1").value
+    let b = document.getElementById("s2").value
+    let c = document.getElementById("s3").value
+    let d = document.getElementById("s4").value
+    let e = document.getElementById("s5").value
+
+    let percentage = (+a + +b + +c + +d + +e )*100/500
+
+    document.getElementById("ans").innerHTML = percentage
+
+</script>
+
+</html>
