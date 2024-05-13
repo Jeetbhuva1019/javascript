@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>--------------change password logic--------------</h1>
+        <h1 id="current_pas"></h1>
+
+        <h1>Enter New Password: </h1>
+        <input type="text" id="in2">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+<script>
+    let password = "JEet@@1019"
+
+    document.getElementById("current_pas").innerHTML = "Your current Password : " + password
+
+    let new_password = document.getElementById("in2").value
+
+    password = new_password
+
+    document.getElementById("ans").innerHTML = "Your New Password : " + password
+
+
+
+
+</script>

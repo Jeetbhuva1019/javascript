@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>--------------Calculate Simple Interest--------------</h1>
+
+        <h1>Enter your Principle amount</h1>
+        <input type="text" id="s1">
+
+        <h1>Enter your rate of interest</h1>
+        <input type="text" id="s2">
+
+        <h1>Enter your time period</h1>
+        <input type="text" id="s3">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("s1").value
+    let b = document.getElementById("s2").value
+    let c = document.getElementById("s3").value
+
+    if (a == "" && b == "" && c == "") {
+        document.getElementById("ans").innerHTML = "Enter your amount"
+    }
+    else {
+        let totle = (+a * +b * +c) / 100
+        document.getElementById("ans").innerHTML = "Your  is Simple Interest =" + totle
+    }
+</script>
