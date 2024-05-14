@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>-------------discount based on the purchase amount-------------</h1>
+
+        <h1>Enter your purchasing price</h1>
+        <input type="text" id="s1">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+
+<script>
+
+    let a = document.getElementById("s1").value
+    let totle
+    if (a == "") {
+        document.getElementById("ans").innerHTML = "Please enter your price proparly"
+    }
+    else if (a <= 0) {
+        document.getElementById("ans").innerHTML = "Please enter your age proparly."
+    }
+    else {
+        if (a >= 1 && a <= 49) {
+            document.getElementById("ans").innerHTML = "You didn't get any discount"
+        }
+        else if (a >= 50 && a <= 99) {
+            let totle = +a - (+a * 10 / 100)
+            document.getElementById("ans").innerHTML = "your price with discount is : " + totle
+        }
+        else if (a >= 100) {
+            let totle = +a - (+a * 20 / 100)
+            document.getElementById("ans").innerHTML = "your price with discount is : " + totle
+        }
+    }
+
+</script>
