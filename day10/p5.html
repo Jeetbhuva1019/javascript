@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>--------------- Starbucks menu ---------------</h1>
+
+        <select name="" id="s1" style="padding: 5px;">
+            <option value="Java Chip Frappuccino">Java Chip Frappuccino</option>
+            <option value="Caffe Americano">Caffe Americano</option>
+            <option value="Cold coffee">Cold coffee</option>
+            <option value="Double Chocolate Chip Frappuccino">Double Chocolate Chip Frappuccino</option>
+            <option value="Cappuccino">Cappuccino</option>
+        </select><br><br>
+
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("s1").value
+
+    switch (a) {
+        case "Java Chip Frappuccino":
+            document.getElementById("ans").innerHTML = "price is 100"
+            break;
+
+        case "Caffe Americano":
+            document.getElementById("ans").innerHTML = "price is 120"
+            break;
+
+        case "Cold coffee":
+            document.getElementById("ans").innerHTML = "price is 90"
+            break;
+
+        case "Double Chocolate Chip Frappuccino":
+            document.getElementById("ans").innerHTML = "price is 140"
+            break;
+
+        case "Cappuccino":
+            document.getElementById("ans").innerHTML = "price is 100"
+            break;
+
+        default:
+            break;
+    }
+
+</script>

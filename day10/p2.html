@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>--------------- Calculator ---------------</h1>
+
+        <input type="number" id="s1" style="padding: 10px;"><br><br>
+
+        <select name="" id="operator" style="padding: 5px;">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br><br>
+
+        <input type="number" id="s2" style="padding: 10px;">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+
+<script>
+    let a = document.getElementById("s1").value
+    let b = document.getElementById("s2").value
+    let c = document.getElementById("operator").value
+
+    switch (c) {
+        case "+": 
+            document.getElementById("ans").innerHTML = "Addition is : " + (+a + +b)
+            break;
+
+        case "-":
+            document.getElementById("ans").innerHTML = "Substraction is : " + (+a - +b)
+            break;
+
+        case "*":
+            document.getElementById("ans").innerHTML = "Multiplication is : " + (+a * +b)
+            break;
+
+        case "/":
+            document.getElementById("ans").innerHTML = "Division is : " + (+a / +b)
+            break;
+
+        default:
+            break;
+    }
+
+</script>
