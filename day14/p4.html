@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Enter a Number</h1>
+        <input type="text" id="s1">
+
+        <h1 id="ans"></h1>
+    </center>
+</body>
+
+</html>
+
+<script>
+
+    c = () => {
+        let a = document.getElementById("s1").value
+
+        document.getElementById("ans").innerHTML = a * 2
+    }
+    c()
+</script>
