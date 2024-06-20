@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <h1>First Line</h1>
+        <button onclick="h1()">Top to change color of first line</button>
+
+        <h3>Second Line</h3>
+        <button onclick="h3()">Top to change color of second line</button>
+
+        <h5>Third Line</h5>
+        <button onclick="h5()">Top to change color of third line</button>
+
+        <h4 class="green">Forth Line</h4>
+        <button onclick="green()">Top to change color of forth line</button>
+
+        <h4 class="blue">Fifth Line</h4>
+        <button onclick="blue()">Top to change color of fifth line</button>
+
+        <h4 class="red">Sixth Line</h4>
+        <button onclick="red()">Top to change color of sixth line</button>
+
+    </center>
+</body>
+
+</html>
+
+<script>
+    function h1() {
+        document.querySelector("h1").style.color = "red"
+    }
+    function h3() {
+        document.querySelector("h3").style.color = "green"
+    }
+    function h5() {
+        document.querySelector("h5").style.color = "blue"
+    }
+    function green() {
+        document.querySelector(".green").style.color = "green"
+    }
+    function blue() {
+        document.querySelector(".blue").style.color = "blue"
+    }
+    function red() {
+        document.querySelector(".red").style.color = "red"
+    }
+    
+</script>
