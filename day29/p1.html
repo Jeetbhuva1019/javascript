@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p1.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <form action="" id="signup" style="background-color: white;">
+        <h1 style="text-align: center; font-size: 28px;">Registration Form</h1>
+        <h4 style="text-align: center; font-size: 14px; margin-top: 8px; color: rgb(95, 95, 95);">Fill out the form
+            carefully for registration</h4>
+        <p id="err" style="color: red; text-align: center;"></p>
+        <div class="baap">
+            <div class="d1">
+                <label for="">Student Name</label>
+                <input type="text" id="name1">
+                <h6 style="color: rgb(116, 116, 116);">First Name</h6><br><br>
+                <label for="">Gender</label><br>
+                <select name="Gender" id="">
+                    <option value="">Please Select</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                </select>
+                <h6 style="color: rgb(116, 116, 116); color: white;">example@example.com</h6><br><br>
+                <label for="">Student ID</label>
+                <input type="tel" name="" id="pw">
+            </div>
+            <div class="d2">
+                <label for="" style="color: white;">Student Name</label>
+                <input type="text">
+                <h6 style="color: rgb(116, 116, 116);" id="name2">Last Name</h6><br><br>
+                <label for="">Student E-mail</label><br>
+                <input type="email" id="email" placeholder="ex:myname@example.com">
+                <h6 style="color: rgb(116, 116, 116);">example@example.com</h6><br><br>
+                <label for="">List of Classes</label>
+                <select name="Gender">
+                    <option value="">Please Select</option>
+                    <option value="">One</option>
+                    <option value="">Two</option>
+                </select>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center;">
+            <input type="submit" class="button">
+        </div>
+    </form>
+</body>
+
+</html>
+<script src="p1.js">
+   
+</script>
