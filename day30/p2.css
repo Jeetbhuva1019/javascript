@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+label{
+    font-size: 14px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    border: 2.4px solid #eee7d7;
+    border-radius: 4px;
+    margin-top: 4px;
+}
+button{
+    width: 100%;
+    background-color: rgb(255, 195, 65);
+    border: none;
+    padding: 8px;
+    border-radius: 3px;
+    margin-top: 4px;
+}
