@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+        }
+
+        .baap {
+            /* border: 1px solid; */
+            width: 20%;
+            height: 350px;
+        }
+        
+        #main {
+            display: flex;
+            background-color: rgb(199, 178, 255);
+            flex-wrap: wrap;
+            gap: 10px;
+            /* border: 1px solid; */
+            height: 300px;
+            border-radius: 8px;
+        }
+
+        .weather {
+            border: 1px solid #ddd;
+            padding: 10px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .weather img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .temperature {
+            font-weight: bold;
+        }
+        #volvo{
+            padding: 12px 24px;
+            border-radius: 4px;
+            border: 2px solid rgb(126, 126, 126);
+
+        }
+        #city{
+            padding: 13px 30px;
+            background-color: rgb(36, 36, 232);
+            color: white;
+            border-radius: 4px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="baap">
+        <input type="text" id="volvo" placeholder="Enter city name">
+        <button id="city">Add</button>
+        <div id="main"></div>
+    </div>
+
+    <script>
+        document.getElementById("city").addEventListener("click", function () {
+            let value = document.getElementById("volvo").value.trim();
+
+            if (value) {
+                let url = `https://api.weatherapi.com/v1/current.json?key=fc14d133f166489a89c90445243007&q=${value}`;
+
+                fetch(url)
+                    .then(res => res.json())
+                    .then(json => {
+                        displayWeather(json);
+                        localStorage.setItem("keys", JSON.stringify(json));
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            } else {
+                alert("Please enter a city name.");
+            }
+        });
+
+        function displayWeather(data) {
+            const mainDiv = document.getElementById('main');
+            const weatherDiv = document.createElement('div');
+            weatherDiv.classList.add('weather');
+
+            const location = `${data.location.name}, ${data.location.region}, ${data.location.country}`;
+            const temperature = `${data.current.temp_c} °C`;
+            const condition = data.current.condition.text;
+            const icon = data.current.condition.icon;
+
+            weatherDiv.innerHTML = `
+                <h2>${location}</h2>
+                <p class="temperature">${temperature}</p>
+                <p>${condition}</p>
+                <img src="${icon}" alt="${condition}">
+            `;
+
+            // Create and add the remove button
+            let removeBtn = document.createElement("button");
+            removeBtn.textContent = "X";
+            removeBtn.addEventListener("click", function () {
+                mainDiv.removeChild(weatherDiv);
+            });
+
+            weatherDiv.appendChild(removeBtn);
+            mainDiv.appendChild(weatherDiv);
+        }
+    </script>
+</body>
+
+</html>
