@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .img {
+        height: 750px;
+        width: 100%;
+        background-image: linear-gradient(rgb(0, 0, 0, 0.8), rgb(0, 0, 0, 0.8)), url(https://assets.contenthub.wolterskluwer.com/api/public/content/943905f93e58411d84eba00cf8ba718a);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #input {
+        padding: 6px 10px;
+        border-radius: 25px;
+        border: none;
+        color: black;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    #main {
+        border: 1px solid rgba(239, 238, 238, 0.205);
+        width: 24%;
+        height: 400px;
+        margin-top: 20px;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+
+    #bt1 {
+        padding: 8px 20px;
+        background-color: white;
+        border-radius: 25px;
+        background-color: rgb(152, 152, 152);
+        border: none;
+        color: white;
+    }
+
+    #l1 {
+        font-size: 2rem;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 40px;
+    }
+
+    #total {
+        color: white;
+        font-size: 2.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 40px;
+    }
+
+    #p_case {
+        color: rgb(0, 38, 255);
+        font-size: 2.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 40px;
+    }
+
+    #r_case {
+        color: green;
+        font-size: 2.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 40px;
+    }
+
+    #d_case {
+        color: red;
+        font-size: 2.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-left: 40px;
+    }
+</style>
+
+<body>
+    <div class="img">
+        <h1 style="text-align: center; color: rgb(202, 202, 202); font-size: 40px; padding-top: 100px;">CORONA VACCINE
+            INFORMATION</h1>
+        <input type="text" id="input" placeholder="Enter city name">
+        <button id="bt1">Search</button>
+        <div id="main">
+            <label for="" id="l1">Total Case:</label>
+            <p id="p_case">0</p> <br>
+            <label for="" id="l1"> Recover Case :</label>
+            <p id="r_case">0</p> <br>
+            <label for="" id="l1"> Deceased Case :</label>
+            <p id="d_case">0</p> <br>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    document.getElementById("bt1").addEventListener("click", function () {
+        let BASE_URL = (" https://data.covid19india.org/v4/min/data.min.json");
+        fetch(BASE_URL).then((res) => {
+            return res.json()
+        }).then((json) => {
+            displayData(json)
+            console.log(json);
+        })
+    })
+    function displayData(data) {
+        let input = document.getElementById("input").value
+        let positive = document.getElementById("p_case")
+        positive.innerHTML = data[input].total.confirmed
+        let recover = document.getElementById("r_case")
+        recover.innerHTML = data[input].total.recovered
+        let deceas = document.getElementById("d_case")
+        deceas.innerHTML = data[input].total.deceased
+    }
+</script>
