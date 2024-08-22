@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ayurveda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="products.html">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <h1 class="display-4" style="text-align: center;">Welcome to E-Commerce Website!</h1>
+        <p class="lead" style="text-align: center;">This is a basic e-commerce website.</p>
+        <hr class="my-4">
+        <p>Explore our products and manage them as an admin!</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="products.html" role="button">View Products</a>
+        </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const addProductForm = document.querySelector("form");
+        addProductForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const productName = document.querySelector("#productName").value;
+            const productDescription = document.querySelector("#productDescription").value;
+            const tableBody = document.querySelector("tbody");
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+            <td>${productName}</td>
+            <td>${productDescription}</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        `;
+            tableBody.appendChild(newRow);
+            document.querySelector("#productName").value = "";
+            document.querySelector("#productDescription").value = "";
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const editButtons = document.querySelectorAll(".btn-primary");
+        editButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const row = button.parentNode.parentNode;
+                const productName = row.cells[0].textContent;
+                const productDescription = row.cells[1].textContent;
+                const editForm = document.createElement("form");
+                editForm.innerHTML = `
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" value="${productName}">
+                <br>
+                <label for="productDescription">Product Description:</label>
+                <textarea id="productDescription">${productDescription}</textarea>
+                <br>
+                <button class="btn btn-primary">Save</button>
+            `;
+                row.innerHTML = "";
+                row.appendChild(editForm);
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-danger");
+        deleteButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const row = button.parentNode.parentNode;
+                row.remove();
+            });
+        });
+    });
+</script>

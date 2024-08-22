@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - E-Commerce Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ayurveda</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Products <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin.html">Admin</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="display-4">Products</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img class="card-img-top"
+                        src="https://images.pexels.com/photos/5420491/pexels-photo-5420491.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Product 1</h5>
+                        <p class="card-text">This is a sample of first product.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-4">
+                <img class="card-img-top"
+                    src="https://images.pexels.com/photos/9145354/pexels-photo-9145354.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product 2</h5>
+                    <p class="card-text">This is a sample of second product.</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img class="card-img-top"
+                    src="https://images.pexels.com/photos/3259584/pexels-photo-3259584.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">Product 3</h5>
+                    <p class="card-text">This is a sample of third product.</p>
+                    <button class="btn btn-primary">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const addProductForm = document.querySelector("form");
+        addProductForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const productName = document.querySelector("#productName").value;
+            const productDescription = document.querySelector("#productDescription").value;
+            const tableBody = document.querySelector("tbody");
+            const newRow = document.createElement("tr");
+            newRow.innerHTML = `
+            <td>${productName}</td>
+            <td>${productDescription}</td>
+            <td>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </td>
+        `;
+            tableBody.appendChild(newRow);
+            document.querySelector("#productName").value = "";
+            document.querySelector("#productDescription").value = "";
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const editButtons = document.querySelectorAll(".btn-primary");
+        editButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const row = button.parentNode.parentNode;
+                const productName = row.cells[0].textContent;
+                const productDescription = row.cells[1].textContent;
+                const editForm = document.createElement("form");
+                editForm.innerHTML = `
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" value="${productName}">
+                <br>
+                <label for="productDescription">Product Description:</label>
+                <textarea id="productDescription">${productDescription}</textarea>
+                <br>
+                <button class="btn btn-primary">Save</button>
+            `;
+                row.innerHTML = "";
+                row.appendChild(editForm);
+            });
+        });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteButtons = document.querySelectorAll(".btn-danger");
+        deleteButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                const row = button.parentNode.parentNode;
+                row.remove();
+            });
+        });
+    });
+</script>
