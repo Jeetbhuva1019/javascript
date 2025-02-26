@@ -1,0 +1,925 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.baap {
+    height: 900px;
+    width: 100%;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 150px;
+    /* border: 1px solid white; */
+    display: flex;
+}
+
+.h1 {
+    height: 150px;
+    width: 50%;
+    /* border: 1px solid white; */
+}
+
+.h11 {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 150px;
+    margin-left: 25px;
+}
+
+.h11:hover {
+    color: rgb(255, 0, 0);
+}
+
+.flex {
+    width: 60%;
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+.h2 {
+    height: 150px;
+    width: 40%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+}
+
+.h21 {
+    width: 180px;
+    margin-left: -50px;
+}
+
+.h3 {
+    height: 150px;
+    width: 50%;
+    /* border: 1px solid white; */
+}
+
+.h31 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(221, 55, 55);
+    padding: 21px 50px;
+    border-radius: 8px;
+    margin-left: 180px;
+    line-height: 150px;
+    transition: .3s;
+}
+
+.h31:hover {
+    background-color: green;
+}
+
+.b1 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 55px;
+    margin-top: 120px;
+    color: white;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+}
+
+.b2 {
+    height: 600px;
+    width: 740px;
+    margin-left: 360px;
+    margin-top: 150px;
+    z-index: 1;
+}
+
+@media(min-width:0px) and (max-width:480px) {
+    .baap {
+        width: 100%;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .h1 {
+        width: 30%;
+        /* border: 1px solid; */
+    }
+
+    .h11 {
+        line-height: 50px;
+        margin-left: 80px;
+    }
+
+    .flex {
+        /* border: 1px solid; */
+        width: 100%;
+    }
+
+    .h2 {
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    .h21 {
+        margin-left: 10px;
+    }
+
+    .h3 {
+        width: 100%;
+        /* border: 1px solid; */
+        margin-left: -100px;
+    }
+
+    .h31 {
+        padding: 5px 10px;
+        border-radius: 4px;
+        line-height: 50px;
+        margin-left: 220px;
+    }
+
+    .b1 {
+        font-size: 25px;
+        margin-top: 250px;
+    }
+
+    .b2 {
+        height: 380px;
+        margin-left: 30px;
+        width: 420px;
+        margin-top: 100px;
+    }
+}
+
+@media(min-width:481px) and (max-width:780px) {
+    .baap {
+        width: 100%;
+        height: 750px;
+    }
+
+    .header {
+        display: block;
+    }
+
+    .h1 {
+        width: 70%;
+        margin-left: 40px;
+        /* border: 1px solid; */
+    }
+
+    .h11 {
+        line-height: 50px;
+        font-size: 16px;
+        /* margin-left: 80px; */
+    }
+
+    .flex {
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    .h2 {
+        width: 100%;
+        /* border: 1px solid; */
+    }
+
+    .h21 {
+        margin-left: 10px;
+    }
+
+    .h3 {
+        width: 60%;
+        /* border: 1px solid; */
+        margin-left: -200px;
+    }
+
+    .h31 {
+        padding: 5px 10px;
+        border-radius: 4px;
+        line-height: 50px;
+        margin-left: 220px;
+    }
+
+    .b1 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+
+    .b2 {
+        height: 540px;
+        margin-left: 30px;
+        width: 680px;
+        margin-top: 100px;
+    }
+}
+
+.page1 {
+    height: 1600px;
+}
+
+.p11 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 180px;
+    font-weight: bolder;
+    letter-spacing: 30px;
+    color: rgba(222, 222, 222);
+    z-index: 0;
+    margin-top: 50px;
+}
+
+.p12 {
+    text-align: center;
+    color: rgb(221, 36, 36);
+    font-size: 130px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+}
+
+.p13 {
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: bolder;
+}
+
+.p14 {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.p15 {
+    height: 400px;
+    width: 85%;
+    margin-top: 80px;
+    margin-left: 7.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p151 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h1.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.p151:hover {
+    filter: blur(2px);
+}
+
+.p152 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h2.jpg);
+    background-size: cover;
+    transition: .5s;
+    margin-top: 0px;
+}
+
+.p152:hover {
+    filter: blur(2px);
+}
+
+.p153 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h3.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.p153:hover {
+    filter: blur(2px);
+}
+
+.p16 {
+    height: 400px;
+    width: 85%;
+    margin-top: 80px;
+    margin-left: 7.5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p161 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h4.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.p161:hover {
+    filter: blur(2px);
+}
+
+.p162 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h5.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.p162:hover {
+    filter: blur(2px);
+}
+
+.p163 {
+    height: 350px;
+    width: 32%;
+    border: 1px solid;
+    border-radius: 25px;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_h6.jpg);
+    background-size: cover;
+    transition: .5s;
+}
+
+.p163:hover {
+    filter: blur(2px);
+}
+
+@media(min-width:0px) and (max-width:480px) {
+    .p11 {
+        font-size: 70px;
+        letter-spacing: 10px;
+    }
+
+    .p12 {
+        font-size: 70px;
+    }
+
+    .p13 {
+        font-size: 40px;
+    }
+
+    .p14 {
+        font-size: 14px;
+    }
+
+    .p15 {
+        display: block;
+    }
+
+    .p151 {
+        width: 100%;
+        border: 1px solid transparent;
+    }
+
+    .p152 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p153 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p16 {
+        margin-top: 920px;
+        display: block;
+    }
+
+    .p161 {
+        width: 100%;
+        border: 1px solid transparent;
+    }
+
+    .p162 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p163 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+}
+
+@media(min-width:481px) and (max-width:780px) {
+    .page1 {
+        margin-top: 100px;
+    }
+
+    .p11 {
+        font-size: 120px;
+        letter-spacing: 15px;
+    }
+
+    .p12 {
+        font-size: 120px;
+    }
+
+    .p13 {
+        font-size: 80px;
+    }
+
+    .p14 {
+        font-size: 18px;
+    }
+
+    .p15 {
+        display: block;
+    }
+
+    .p151 {
+        width: 100%;
+        border: 1px solid transparent;
+    }
+
+    .p152 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p153 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p16 {
+        margin-top: 920px;
+        display: block;
+    }
+
+    .p161 {
+        width: 100%;
+        border: 1px solid transparent;
+    }
+
+    .p162 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+
+    .p163 {
+        width: 100%;
+        margin-top: 90px;
+        border: 1px solid transparent;
+    }
+}
+
+.page2 {
+    height: 750px;
+    width: inherit;
+    border: 1px solid;
+    background-image: url(https://demo2.wpopal.com/fazfood/wp-content/uploads/2023/11/ldp_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.p21 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 70px;
+    margin-top: 100px;
+}
+
+.p22 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: rgb(180, 180, 180);
+    font-size: 18px;
+}
+
+.p23 {
+    margin-left: 60px;
+    margin-top: 70px;
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 0px 15px);
+    transition-duration: 1s;
+}
+
+.p23:hover {
+    scale: 1.01;
+
+}
+
+@media(min-width:0px) and (max-width:480px) {
+    .page2 {
+        margin-top: 1450px;
+        height: 600px;
+    }
+
+    .p21 {
+        font-size: 70px;
+        letter-spacing: 2px;
+    }
+
+    .p22 {
+        font-size: 14px;
+    }
+
+    .p23 {
+        width: 465px;
+        margin-left: 0px;
+    }
+}
+
+@media(min-width:481px) and (max-width:780px) {
+    .page2 {
+        margin-top: 1600px;
+        height: 600px;
+    }
+
+    .p21 {
+        font-size: 100px;
+        letter-spacing: 2px;
+    }
+
+    .p22 {
+        font-size: 18px;
+    }
+
+    .p23 {
+        width: 760px;
+        margin-left: 0px;
+    }
+}
+
+.page3 {
+    /* border: 1px solid; */
+    height: 640px;
+    margin-top: 150px;
+    background-color: #f4f1ea;
+}
+
+.p31 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 70px;
+    font-weight: bolder;
+    padding-top: 100px;
+    color: rgb(39, 39, 39);
+}
+
+.p32 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    margin-top: 25px;
+    color: rgb(39, 39, 39);
+}
+
+.p33 {
+    width: 80%;
+    /* border: 1px solid; */
+    height: 200px;
+    margin-left: 10%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.p331 {
+    height: 100px;
+    /* border: 1px solid; */
+    width: 100px;
+    transition: .2s;
+}
+
+.p331:hover {
+    scale: 1.1;
+}
+
+.p332 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+@media(min-width:0px) and (max-width:480px) {
+    .page3 {
+        height: 790px;
+    }
+
+    .p31 {
+        font-size: 40px;
+    }
+
+    .p32 {
+        font-size: 14px;
+    }
+
+    .p33 {
+        margin-top: -10px;
+    }
+
+    .p331 {
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+}
+
+@media(min-width:481px) and (max-width:780px) {
+    .page3 {
+        margin-top: 200px;
+        height: 790px;
+    }
+
+    .p31 {
+        font-size: 70px;
+    }
+
+    .p32 {
+        font-size: 20px;
+    }
+
+    .p33 {
+        margin-top: -10px;
+        margin-left: 55px;
+    }
+
+    .p331 {
+        flex-wrap: wrap;
+        margin-top: 60px;
+        margin-left: 50px;
+    }
+}
+
+.footer {
+    /* border: 1px solid; */
+    height: 300px;
+    margin-top: 50px;
+}
+
+.lastimg {
+    position: relative;
+    top: 100px;
+    left: 310px;
+}
+
+.f1 {
+    width: 1640px;
+}
+
+.f2 {
+    margin-top: -600px;
+}
+
+.f3 {
+    /* border: 1px solid; */
+    height: 300px;
+    width: 60%;
+    position: relative;
+    top: -120px;
+    left: 20%;
+    display: flex;
+}
+
+.f31 {
+    /* border: 1px solid; */
+    height: 300px;
+    width: 50%;
+}
+
+.f311 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-left: 14px;
+    padding-bottom: 50px;
+}
+
+.f312 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    text-decoration: underline rgba(233, 227, 227, 0.267);
+}
+
+.f312:hover {
+    text-decoration: underline rgb(202, 202, 202);
+}
+
+.f32 {
+    /* border: 1px solid; */
+    height: 300px;
+    width: 50%;
+}
+
+.f321 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-left: 14px;
+    padding-bottom: 50px;
+}
+
+.f322 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    text-decoration: underline rgba(233, 227, 227, 0.267);
+}
+
+.f322:hover {
+    text-decoration: underline rgb(202, 202, 202);
+}
+
+.f33 {
+    /* border: 1px solid; */
+    height: 300px;
+    width: 50%;
+}
+
+.mf31 {
+    width: 50%;
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+.mf32 {
+    width: 50%;
+    display: flex;
+    /* border: 1px solid white; */
+}
+
+.f331 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-left: 14px;
+    padding-bottom: 50px;
+}
+
+.f332 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 20px;
+    color: rgb(202, 202, 202);
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    text-decoration: underline rgba(233, 227, 227, 0.267);
+}
+
+.f332:hover {
+    text-decoration: underline rgb(202, 202, 202);
+}
+
+.f34 {
+    height: 300px;
+    width: 50%;
+}
+
+.f342 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.f341 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-left: 14px;
+}
+
+.last {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: -80px;
+    color: white;
+    font-size: 20px;
+}
+
+@media(min-width:0px) and (max-width:480px) {
+    .f1 {
+        height: 1000px;
+    }
+
+    .f2 {
+        display: none;
+    }
+
+    .lastimg {
+        margin-left: -140px;
+    }
+
+    .f3 {
+        margin-left: -90px;
+        display: block;
+    }
+
+    .mf31 {
+        width: 470px;
+        height: 400px;
+        display: flex;
+        margin-left: 30px;
+        /* border: 1px solid white; */
+    }
+
+    .f31 {
+        width: 50%;
+    }
+
+    .mf32 {
+        width: 470px;
+        height: 250px;
+        display: flex;
+        margin-top: 50px;
+        /* border: 1px solid white; */
+        margin-left: 30px;
+    }
+
+    .f33 {
+        width: 50%;
+    }
+
+    .f342 {
+        /* border: 1px solid white; */
+        width: 200px;
+        height: 150px;
+        margin-top: 50px;
+    }
+
+    .last {
+        margin-top: 300px;
+    }
+}
+
+@media(min-width:481px) and (max-width:780px) {
+    .f1 {
+        height: 700px;
+    }
+
+    .f2 {
+        display: none;
+    }
+
+    .f3 {
+        margin-left: -150px;
+        width: 680px;
+        /* border: 1px solid white; */
+    }
+
+    .mf31 {
+        width: 470px;
+        height: 400px;
+        display: flex;
+        margin-left: 30px;
+        /* border: 1px solid white; */
+    }
+
+    .f31 {
+        width: 50%;
+    }
+
+    .mf32 {
+        width: 470px;
+        height: 250px;
+        display: flex;
+        margin-top: 50px;
+        /* border: 1px solid white; */
+        margin-left: 30px;
+        margin-top: 0px;
+    }
+
+    .f33 {
+        width: 50%;
+    }
+
+    .f342 {
+        /* border: 1px solid white; */
+        width: 200px;
+        height: 150px;
+        margin-top: 50px;
+    }
+
+    .last {
+        margin-top: 20px;
+    }
+}
